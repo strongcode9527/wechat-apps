@@ -1,10 +1,11 @@
 {
-  "window":{
+  "window": {
     "navigationBarBackgroundColor": "#BBDEF8",
     "navigationBarTitleText": "Demo",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/detail/detail"
   ]
 }

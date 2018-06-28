@@ -1,2 +1,23 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+
+<scroll-view class="home">
+  <view 
+    wx:for-index="id" 
+    id="{{topic.id}}"
+    wx:for="{{topics}}" 
+    wx:for-item="topic" 
+    wx:key="{{topic.id}}"
+    bindtap="handleClick"
+    class="topic__list--item"
+   >
+    <image 
+      class="topic__list--img"
+      src="{{topic.images[0].filename}}"
+      wx:if="{{topic.images.length > 0}}" 
+    />
+    <text class="topic__list--title">
+      {{topic.post.title}}
+    </text>
+  </view>
+</scroll-view>
+
