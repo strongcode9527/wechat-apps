@@ -1,8 +1,8 @@
 <!--pages/detail/detail.wxml-->
-<scroll-view class="detail">
-  <text>{{topic.id}}</text>
-  <rich-text nodes="{{topic.post.content}}" bindtap="tap"></rich-text>
-</scroll-view>
+<import src="../../wxParse/wxParse.wxml" />
+<view class="wxParse">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
   
 
 

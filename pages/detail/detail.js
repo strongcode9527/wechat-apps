@@ -1,4 +1,7 @@
 // pages/detail/detail.js
+
+var WxParse = require('../../wxParse/wxParse.js');
+
 Page({
 
   /**
@@ -6,7 +9,7 @@ Page({
    */
   data: {
     topic: {},
-    content: '',
+    article: {},
   },
 
   /**
@@ -31,6 +34,7 @@ Page({
       success: function (res) {
         that.setData({
           topic: res.data.data,
+          article: WxParse.wxParse('article', 'html', res.data.data.post.content, that)
         })
       },
       fail: function (res) {

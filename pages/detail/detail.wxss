@@ -1,9 +1,14 @@
 /* pages/detail/detail.wxss */
+
+@import "../../wxParse/wxParse.wxss";
+
 .detail {
-  background: red;
+  width: 94%;
+  padding: 3%;
 }
+
 image {
-  width: 100%;
+  width: 200px;
   height: 200px;
   display: block;
 }
